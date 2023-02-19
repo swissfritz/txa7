@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tanken Diesel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <img src="assets/img/txCard.png">
+    <p>Tanken mit Tankkarte bei angeführten ENI-Tankstellen. Die Karte
+      bekommen Sie bei Herrn Lehner, Frau Latin oder Frau Fiala.
+    </p>
+    <ion-item lines="none">
+      <ion-button size="big" color="dark" (click)="z2()">02. Bezirk</ion-button>
+      <ion-button size="big"  color="dark" (click)="z3()">03. Bezirk</ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button size="big" color="dark" (click)="z10()">10. Bezirk</ion-button>
+      <ion-button size="big" color="dark" (click)="z12()">12. Bezirk</ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button size="big" color="dark" (click)="z19()">19. Bezirk</ion-button>
+      <ion-button size="big" color="dark" (click)="z20()">20. Bezirk</ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button size="big" color="dark" (click)="z21()">21. Bezirk</ion-button>
+      <ion-button size="big" color="dark" (click)="z22()">22. Bezirk</ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button size="big" color="dark" (click)="z23()">23. Bezirk</ion-button>
+    </ion-item>
+        <ion-button expand="block" color="light"  (click)="goBack()">zurück</ion-button> <br>
+</ion-content>

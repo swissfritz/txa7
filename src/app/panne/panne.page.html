@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Panne</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <H5>Der Wagen ist nicht mehr fahrbar:
+    Direkt <u>vom Pannenort</u> aus anrufen</H5><br>
+
+    <a href="tel:+4316800820">ANRUFEN </a>
+
+    <H5>Außerhalb Betriebszeiten folgende Informationen <u>vom Pannenort aus</u> senden:</H5>
+
+    <ion-input placeholder="Fahrzeug-Kennzeichen" [(ngModel)]="zul" type="text"></ion-input><br>
+
+    <ion-textarea placeholder="Standort-Beschreibung" [(ngModel)]="stao" type="text"></ion-textarea>
+
+    <ion-button expand="block" color="light"  (click)="sendMailT()">Senden</ion-button>
+
+</ion-content>

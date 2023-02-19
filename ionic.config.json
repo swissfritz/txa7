@@ -1,0 +1,7 @@
+{
+  "name": "txaneo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

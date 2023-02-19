@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Rückmeldung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Rückmeldung</h3><br>
+
+  <p>Melden Sie uns hier bitte, wenn in der Taxoil-App eine Information fehlt oder falsch ist
+    oder wenn etwas nicht richtig funktioniert.<br><br>Natürlich können Sie uns auch gerne
+    berichten, wenn Ihnen die App in einer bestimmten Situation nützlich war. Danke!
+  </p>
+
+    <ion-textarea placeholder="Beschreibung" [(ngModel)]="message" type="text"></ion-textarea>
+
+    <ion-button expand="block" color="light"  (click)="sendMail()">Senden</ion-button>
+
+
+</ion-content>
