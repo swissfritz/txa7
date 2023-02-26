@@ -25,3 +25,22 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* alert CSS */
+.alm {
+    --backdrop-opacity: 0.6;
+    --background: yellow;
+    .alert-title.sc-ion-alert-md, .alert-title.sc-ion-alert-ios {
+        font-size: 16;
+        color: black;
+    }
+    .alert-message.sc-ion-alert-md, .alert-message.sc-ion-alert-ios {
+        color: black;
+    }
+    .alert-button.sc-ion-alert-md, .alert-button.sc-ion-alert-ios {
+        color: black;
+        background-color: orange;
+        width: 110px;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+}
