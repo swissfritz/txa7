@@ -28,11 +28,12 @@ export class Buchen1Page implements OnInit {
         if (this.router.getCurrentNavigation().extras.state) {
           this.basinf = this.router.getCurrentNavigation().extras.state.bi;
         }
-        console.log('Basisinfo:', this.basinf);
       });
     }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.basinf);
+  }
 
   makeList() {
     const mon = 'MO: ' + this.mo;
