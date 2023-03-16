@@ -18,7 +18,7 @@ export class RegelnPage implements OnInit {
   async opnLeuchten() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Am Armaturenbrett leuchtet ROTE Warnung:</strong><br><br>Bitte Motor abstellen und nicht mehr starten! Zum Menupunkt Panne gehen.',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -27,7 +27,7 @@ export class RegelnPage implements OnInit {
   async opnUnfall() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Unfall:</strong><br><br>Bitte zum Menupunkt Unfall gehen.',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -36,7 +36,7 @@ export class RegelnPage implements OnInit {
   async opnTanken() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Tanken:</strong><br><br>Tanken ausschließlich mit Tankkarte (Lehner) an ENI-Tankstellen (Menupunkt Tanken)',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -45,7 +45,7 @@ export class RegelnPage implements OnInit {
   async opnSaug() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Saugen:</strong> Bitte Ihr Taxi nur in der Firma saugen!<br><strong>Waschen:</strong> mit Zulassungsschein (Taxoil) um € 3,90 bei ENI - Rautenweg <br> <strong>Innenreinigung:</strong> bei Herrn Lehner anmelden und wir reinigen es gründlich. ',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -54,7 +54,7 @@ export class RegelnPage implements OnInit {
   async opnAbst() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Auto abstellen:</strong><br><br> Wenn Sie das Taxi abholen oder aber das Auto abstellen, dann gehört es auf die Julius-Ficker-Straße. Im Hof abstellen bitte nur zur Reparatur!',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -63,7 +63,7 @@ export class RegelnPage implements OnInit {
   async opnZusatz() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Zusatzeinbauten:</strong><br><br>Zusatzeinbauten nur in unserer Werkstätte!',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -72,7 +72,7 @@ export class RegelnPage implements OnInit {
   async opnRauch() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Rauchverbot:</strong><br><br>Wenn in Ihrem Taxi geraucht wird, wird es für Sie teuer!',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
@@ -81,7 +81,7 @@ export class RegelnPage implements OnInit {
   async opnBruch() {
     const alert = await this.alertCtrl.create({
       message: '<strong>Einbruch</strong><br><br>Nichts im Wagen liegen lassen, auch nicht für 2 Minuten, Taxieinbrecher sind darauf spezielisiert! Zu Ihrer fehlenden Brieftasche kommt noch die Scheibe dazu.',
-      buttons: ['Schließen'],
+      buttons: ['ZURÜCK'],
       cssClass: 'alm'
     });
     await alert.present();
