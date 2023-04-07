@@ -27,7 +27,7 @@
     "@awesome-cordova-plugins/splash-screen": "^6.3.0",
     "@awesome-cordova-plugins/status-bar": "^6.3.0",
     "@ionic/angular": "^7.0.0",
-    "@ionic/cli": "^6.20.3",
+    "@ionic/cli": "^6.20.9",
     "@ionic/cordova-builders": "^7.0.0",
     "@ionic/core": "^6.3.8",
     "cordova": "^11.1.0",

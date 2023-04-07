@@ -11,13 +11,70 @@
   <br>
   <h5>Bitte Öffnungszeiten beachten!</h5><br><br>
   <ion-list>
-    <ion-button expand="block" color="dark" (click)="opnLeuchten()">Armaturenbrett</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnAbst()">Auto abstellen</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnBruch()">Einbruch</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnRauch()">Rauchverbot</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnUnfall()">Unfall</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnTanken()">Tanken</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnSaug()">Wagenpflege</ion-button>
-    <ion-button expand="block" color="dark" (click)="opnZusatz()">Zusatzeinbauten</ion-button>
+    <ion-button expand="block" color="dark" class="alm" id="leuchten">Armaturenbrett</ion-button>
+      <ion-alert
+        trigger="leuchten"
+        header="Am Armaturenbtett..."
+        subHeader="...leuchtet ROTE Warnung"
+        message="Bitte Motor abstellen und nicht mehr starten! Zum Menupunkt Panne gehen."
+        [buttons]="alertButtons">
+      </ion-alert>
+    <ion-button expand="block" color="dark" class="alm" id="Abst">Auto abstellen</ion-button>
+      <ion-alert
+        trigger="Abst"
+        header="Auto abstellen"
+        subHeader=""
+        message="Wenn Sie das Taxi abholen oder aber das Auto abstellen, dann gehört es auf die Julius-Ficker-Straße. Im Hof abstellen bitte nur zur Reparatur!"
+        [buttons]="alertButtons">
+      </ion-alert>
+    <ion-button expand="block" color="dark" id="Bruch">Einbruch</ion-button>
+      <ion-alert
+        trigger="Bruch"
+        header="Einbruch"
+        subHeader=""
+        message="Nichts im Wagen liegen lassen, auch nicht für 2 Minuten, Taxieinbrecher sind darauf spezielisiert! Zu Ihrer fehlenden Brieftasche kommt noch die Scheibe dazu."
+        [buttons]="alertButtons">
+      </ion-alert>
+    <ion-button expand="block" color="dark" id="Rauch">Rauchverbot</ion-button>
+      <ion-alert
+        trigger="Rauch"
+        header="Rauchverbot"
+        subHeader=""
+        message="Wenn in Ihrem Taxi geraucht wird, wird es für Sie teuer!"
+        [buttons]="alertButtons">
+      </ion-alert>
+
+    <ion-button expand="block" color="dark" id="Unfall">Unfall</ion-button>
+      <ion-alert
+        trigger="Unfall"
+        header="Unfall"
+        subHeader=""
+        message="Bitte zum Menupunkt Unfall gehen."
+        [buttons]="alertButtons">
+      </ion-alert>
+    <ion-button expand="block" color="dark" id="Tanken" (click)="opnTanken()">Tanken</ion-button>
+      <ion-alert
+        trigger="Tanken"
+        header="Tanken"
+        subHeader=""
+        message="Tanken ausschließlich mit Tankkarte (Lehner) an ENI-Tankstellen (Menupunkt Tanken)"
+        [buttons]="alertButtons">
+    </ion-alert>
+    <ion-button expand="block" color="dark" id="Pflege" (click)="opnSaug()">Wagenpflege</ion-button>
+      <ion-alert
+        trigger="Pflege"
+        header="Wagenpflege"
+        subHeader=""
+        message="Bitte Ihr Taxi nur in der Firma saugen!<br><strong>Waschen:</strong> mit Zulassungsschein (Taxoil) um € 3,90 bei ENI - Rautenweg <br> <strong>Innenreinigung:</strong> bei Herrn Lehner anmelden und wir reinigen es gründlich."
+        [buttons]="alertButtons">
+      </ion-alert>
+    <ion-button expand="block" color="dark" id="Zusatz" (click)="opnZusatz()">Zusatzeinbauten</ion-button>
+      <ion-alert
+        trigger="Zusatz"
+        header="Zusatzeinbauten"
+        subHeader=""
+        message="Zusatzeinbauten nur in unserer Werkstätte!"
+        [buttons]="alertButtons">
+    </ion-alert>
   </ion-list>
 </ion-content>

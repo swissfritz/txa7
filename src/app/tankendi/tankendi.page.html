@@ -12,24 +12,80 @@
     <p>Tanken mit Tankkarte bei angeführten ENI-Tankstellen. Die Karte
       bekommen Sie bei Herrn Lehner, Frau Latin oder Frau Fiala.
     </p>
-    <ion-item lines="none">
-      <ion-button size="big" color="dark" (click)="z2()">02. Bezirk</ion-button>
-      <ion-button size="big"  color="dark" (click)="z3()">03. Bezirk</ion-button>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-button size="big" color="dark" (click)="z10()">10. Bezirk</ion-button>
-      <ion-button size="big" color="dark" (click)="z12()">12. Bezirk</ion-button>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-button size="big" color="dark" (click)="z19()">19. Bezirk</ion-button>
-      <ion-button size="big" color="dark" (click)="z20()">20. Bezirk</ion-button>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-button size="big" color="dark" (click)="z21()">21. Bezirk</ion-button>
-      <ion-button size="big" color="dark" (click)="z22()">22. Bezirk</ion-button>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-button size="big" color="dark" (click)="z23()">23. Bezirk</ion-button>
-    </ion-item>
-        <ion-button expand="block" color="light"  (click)="goBack()">zurück</ion-button> <br>
+    <ion-list>
+      <ion-button class="alm" expand="block" color="dark" id="b02">2. Bezirk</ion-button>
+      <ion-alert
+        trigger="b02"
+        header="1020 Wien"
+        subHeader=""
+        message="Handelskai 388a: 06:00-21:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b03">3. Bezirk</ion-button>
+      <ion-alert
+        trigger="b03"
+        header="1030 Wien"
+        subHeader=""
+        message="Erdbergstr. 189: 06:00-22:00&#10;&#13;Oberzellergasse 3a: 00:00-24:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b10">10. Bezirk</ion-button>
+      <ion-alert
+        trigger="b10"
+        header="1100 Wien"
+        subHeader=""
+        message="Grenzackerstr. 6-8: 06:00-22:00&#10;&#13;Raxstr. 38: 00:00-24:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b12">12. Bezirk</ion-button>
+      <ion-alert
+        trigger="b12"
+        header="1120 Wien"
+        subHeader=""
+        message="Bonygasse 47: 06:00-22:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b19">19. Bezirk</ion-button>
+      <ion-alert
+        trigger="b19"
+        header="1190 Wien"
+        subHeader=""
+        message="Krottenbachstr. 32-34: 06:00-22:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b20">20. Bezirk</ion-button>
+      <ion-alert
+        trigger="b20"
+        header="1200 Wien"
+        subHeader=""
+        message="Jägerstr. 60: 06:00-22:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b21">21. Bezirk</ion-button>
+      <ion-alert
+        trigger="b21"
+        header="1210 Wien"
+        subHeader=""
+        message="Leopoldauestr. 180: 00:00-24:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b22">22. Bezirk</ion-button>
+      <ion-alert
+        trigger="b22"
+        header="1220 Wien"
+        subHeader=""
+        message="Donaustadtstr. 43: 00:00-24:00&#10;&#13;Rautenweg 13: 06:00-22:00"
+        [buttons]="alertButtons">
+      </ion-alert>
+      <ion-button class="alm" expand="block" color="dark" id="b23">23. Bezirk</ion-button>
+      <ion-alert
+        trigger="b23"
+        header="1230 Wien"
+        subHeader=""
+        message="Breitenfurterstr. 210: 06:00-24:000"
+        [buttons]="alertButtons">
+      </ion-alert>
+    </ion-list>
+
+    <ion-button expand="block" color="light"  (click)="goBack()">zurück</ion-button> <br>
 </ion-content>
