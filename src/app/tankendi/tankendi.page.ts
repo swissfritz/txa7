@@ -7,7 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./tankendi.page.scss'],
 })
 export class TankendiPage implements OnInit {
-  public alertButtons = ['Schließen'];
+  public alertButtons = [
+    {
+      text: 'Schließen',
+      role: 'confirm',
+      cssClass: 'customButtoncss',
+      handler: () => { console.log('Alert confirmed'); }
+    }
+  ];
 
   constructor(private router: Router) { }
 

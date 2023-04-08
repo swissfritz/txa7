@@ -14,10 +14,11 @@
     <ion-button expand="block" color="dark" class="alm" id="leuchten">Armaturenbrett</ion-button>
       <ion-alert
         trigger="leuchten"
-        header="Am Armaturenbtett..."
+        header="Am Armaturenbrett..."
         subHeader="...leuchtet ROTE Warnung"
         message="Bitte Motor abstellen und nicht mehr starten! Zum Menupunkt Panne gehen."
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
       </ion-alert>
     <ion-button expand="block" color="dark" class="alm" id="Abst">Auto abstellen</ion-button>
       <ion-alert
@@ -25,7 +26,8 @@
         header="Auto abstellen"
         subHeader=""
         message="Wenn Sie das Taxi abholen oder aber das Auto abstellen, dann gehört es auf die Julius-Ficker-Straße. Im Hof abstellen bitte nur zur Reparatur!"
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
       </ion-alert>
     <ion-button expand="block" color="dark" id="Bruch">Einbruch</ion-button>
       <ion-alert
@@ -33,7 +35,8 @@
         header="Einbruch"
         subHeader=""
         message="Nichts im Wagen liegen lassen, auch nicht für 2 Minuten, Taxieinbrecher sind darauf spezielisiert! Zu Ihrer fehlenden Brieftasche kommt noch die Scheibe dazu."
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
       </ion-alert>
     <ion-button expand="block" color="dark" id="Rauch">Rauchverbot</ion-button>
       <ion-alert
@@ -41,7 +44,8 @@
         header="Rauchverbot"
         subHeader=""
         message="Wenn in Ihrem Taxi geraucht wird, wird es für Sie teuer!"
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
       </ion-alert>
 
     <ion-button expand="block" color="dark" id="Unfall">Unfall</ion-button>
@@ -50,7 +54,8 @@
         header="Unfall"
         subHeader=""
         message="Bitte zum Menupunkt Unfall gehen."
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
       </ion-alert>
     <ion-button expand="block" color="dark" id="Tanken">Tanken</ion-button>
       <ion-alert
@@ -58,7 +63,8 @@
         header="Tanken"
         subHeader=""
         message="Tanken ausschließlich mit Tankkarte (Lehner) an ENI-Tankstellen (Menupunkt Tanken)"
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
     </ion-alert>
     <ion-button expand="block" color="dark" id="Pflege">Wagenpflege</ion-button>
       <ion-alert
@@ -66,7 +72,8 @@
         header="Wagenpflege"
         subHeader=""
         message="Bitte Ihr Taxi nur in der Firma saugen! Waschen: mit Zulassungsschein (Taxoil) um € 3,90 bei ENI - Rautenweg. Innenreinigung: bei Herrn Lehner anmelden und wir reinigen es gründlich."
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
       </ion-alert>
     <ion-button expand="block" color="dark" id="Zusatz">Zusatzeinbauten</ion-button>
       <ion-alert
@@ -74,7 +81,8 @@
         header="Zusatzeinbauten"
         subHeader=""
         message="Zusatzeinbauten nur in unserer Werkstätte!"
-        [buttons]="alertButtons">
+        [buttons]="alertButtons"
+        class="alertcss">
     </ion-alert>
   </ion-list>
 </ion-content>

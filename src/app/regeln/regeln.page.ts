@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./regeln.page.scss'],
 })
 export class RegelnPage implements OnInit {
-  public alertButtons = ['Schließen'];
+  public alertButtons = [
+    {
+      text: 'Schließen',
+      role: 'confirm',
+      cssClass: 'customButtoncss',
+      handler: () => { console.log('Alert confirmed'); }
+    }
+  ];
 
   constructor() { }
 
