@@ -26,7 +26,7 @@ export class BuchenPage implements OnInit {
 
     const value = this.buchenForm.value;
 
-    if (this.buchenForm.valid && value.names && value.sameCar) {
+    if (this.buchenForm.valid && value.names) {
       const nomen = this.buchenForm.value.names;
       const sameCar = this.buchenForm.value.sameCar;
       let fzGleich;
