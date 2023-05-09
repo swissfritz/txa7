@@ -18,7 +18,7 @@ export class Buchen1Page implements OnInit {
   so: '';
   basinf: any;
   mes1: string;
-  woche1 = [];
+  woche1: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,64 +32,21 @@ export class Buchen1Page implements OnInit {
     }
 
   ngOnInit() {
-    console.log(this.basinf);
   }
 
   makeList() {
-    const mon = 'MO: ' + this.mo;
-    if  (this.mo === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(mon);
-    }
+    this.woche1 = [
+      this.mo, this.di, this.mi, this.do, this.fr, this.sa, this.so
+    ].filter(day => day !== undefined).join(', ');
+  }
 
-    const die = 'DI: ' + this.di;
-    if  (this.di === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(die);
-    }
-
-    const mit = 'MI: ' + this.mi;
-    if  (this.mi === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(mit);
-    }
-
-    const don = 'DO: ' + this.do;
-    if  (this.do === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(don);
-    }
-
-    const fre = 'FR: ' + this.fr;
-    if  (this.fr === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(fre);
-    }
-
-    const sam = 'SA: ' + this.sa;
-    if  (this.sa === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(sam);
-    }
-
-
-    const son = 'SO: ' + this.so;
-    if  (this.so === undefined) {
-      console.log('');
-    } else {
-      this.woche1.push(son);
-    }
+  buildMessage() {
+    this.makeList();
+    this.mes1 = 'Basisinformationen: ' + this.basinf + '<br> Taxi für nächste Woche: <br>' + this.woche1;
   }
 
   goNext() {
-    this.makeList();
-    this.mes1 = 'Basisinformationen: ' + this.basinf + '<br>' + 'Taxi für nächste Woche:<br>' + this.woche1;
+    this.buildMessage();
     const navex: NavigationExtras = {
       state: {
         m1: this.mes1
@@ -99,8 +56,7 @@ export class Buchen1Page implements OnInit {
 }
 
   sendMail() {
-    this.makeList();
-    this.mes1 = 'Basisinformationen: ' + this.basinf + '<br>' + 'Taxi für nächste Woche:<br>' + this.woche1;
+    this.buildMessage();
     const email = {
       to: 'bestellen@taxiwerbung.at',
       subject: 'Taxi-Reservierung',

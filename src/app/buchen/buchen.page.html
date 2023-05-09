@@ -14,13 +14,12 @@
   <form [formGroup]="buchenForm" (ngSubmit)="onSubmit()" #form="ngForm">
     <ion-item lines="none">
       <ion-input class="tex" formControlName="names" type="text"
-        placeholder="Name und Vorname"></ion-input>
+        label="Name und Vorname" aria-placeholder="Name und Vorname"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
-      <ion-label>Gleiches Auto???</ion-label>
-      <ion-toggle class="bggr" slot="start" color="light" formControlName="sameCar" type="toggle" checked="false">
-      </ion-toggle>
+      <ion-toggle class="bggr" slot="start" color="light" formControlName="sameCar"
+      type="toggle" checked="false">Gleiches Auto???</ion-toggle>
     </ion-item> <br><br><br>
 
     <ion-item class="error-message"
