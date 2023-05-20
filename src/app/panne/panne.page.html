@@ -15,9 +15,9 @@
 
     <H5>Außerhalb Betriebszeiten folgende Informationen <u>vom Pannenort aus</u> senden:</H5>
 
-    <ion-input class="tex" placeholder="Fahrzeug-Kennzeichen" [(ngModel)]="zul" type="text"></ion-input><br>
+    <ion-input class="tex" label="Kz:" placeholder="Fahrzeug-Kennzeichen" [(ngModel)]="zul" type="text"></ion-input><br>
 
-    <ion-textarea class="tex" placeholder="Standort-Beschreibung" [(ngModel)]="stao" type="text"></ion-textarea>
+    <ion-textarea class="tex" label="Stao:" placeholder="Standort-Beschreibung" [(ngModel)]="stao" type="text"></ion-textarea>
 
     <ion-button expand="block" color="light"  (click)="sendMailT()">Senden</ion-button>
 

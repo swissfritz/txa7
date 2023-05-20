@@ -9,43 +9,37 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 })
 export class Buchen2Page implements OnInit {
 
-  mo: '';
-  di: '';
-  mi: '';
-  do: '';
-  fr: '';
-  sa: '';
-  so: '';
-  basinf: any;
-  mes1: string;
-  message: string;
-  woche2: string;
+  mo: string = '';
+  di: string = '';
+  mi: string = '';
+  do: string = '';
+  fr: string = '';
+  sa: string = '';
+  so: string = '';
+  basinf: string = '';
+  mes1: string = '';
+  woche2: string = '';
+  message: string = '';
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    public emailComposer: EmailComposer) {
-      this.route.queryParams.subscribe(params => {
-        if (this.router.getCurrentNavigation().extras.state) {
-          this.mes1 = this.router.getCurrentNavigation().extras.state.m1;
-        }
-        console.log('Message 1: ', this.mes1);
-      });
-    }
+    public emailComposer: EmailComposer) { }
 
   ngOnInit() {
-
+    this.mes1 = history.state.m1;
+    console.log('Message 1: ', this.mes1);
   }
 
   makeList() {
     this.woche2 = [
       this.mo, this.di, this.mi, this.do, this.fr, this.sa, this.so
-    ].filter(day => day !== undefined).join(', ');
+    ].filter(day => day !== undefined).join(' ');
   }
 
   buildMessage() {
     this.makeList();
-    this.message = this.mes1 + '<br> für übernächste Woche:<br>' + this.woche2;
+    this.message = this.mes1 + ', für übernächste Woche: ' + this.woche2;
   }
 
   sendMail() {

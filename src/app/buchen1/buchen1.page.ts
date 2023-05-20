@@ -9,40 +9,36 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 })
 export class Buchen1Page implements OnInit {
 
-  mo: '';
-  di: '';
-  mi: '';
-  do: '';
-  fr: '';
-  sa: '';
-  so: '';
-  basinf: any;
-  mes1: string;
-  woche1: string;
+  mo: string = '';
+  di: string = '';
+  mi: string = '';
+  do: string = '';
+  fr: string = '';
+  sa: string = '';
+  so: string = '';
+  basinf: string = '';
+  mes1: string = '';
+  woche1: string = '';
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    public emailComposer: EmailComposer) {
-      this.route.queryParams.subscribe(params => {
-        if (this.router.getCurrentNavigation().extras.state) {
-          this.basinf = this.router.getCurrentNavigation().extras.state.bi;
-        }
-      });
-    }
+    public emailComposer: EmailComposer) { }
 
   ngOnInit() {
+    this.basinf = history.state.bi;
+    console.log('Basisinfo: ', this.basinf);
   }
 
   makeList() {
     this.woche1 = [
       this.mo, this.di, this.mi, this.do, this.fr, this.sa, this.so
-    ].filter(day => day !== undefined).join(', ');
+    ].filter(day => day !== undefined).join(' ');
   }
 
   buildMessage() {
     this.makeList();
-    this.mes1 = 'Basisinformationen: ' + this.basinf + '<br> Taxi für nächste Woche: <br>' + this.woche1;
+    this.mes1 = 'Basisinformationen: ' + this.basinf + ', Taxi für nächste Woche: ' + this.woche1;
   }
 
   goNext() {

@@ -53,3 +53,10 @@
 .tex {
     --background: white !important;
 }
+
+/* white bg, black foreground */
+.bow {
+    --background: white !important;
+    color: black !important;
+    font-size: medium;
+}

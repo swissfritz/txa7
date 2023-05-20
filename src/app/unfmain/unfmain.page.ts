@@ -10,9 +10,9 @@ import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera/ngx';
   styleUrls: ['./unfmain.page.scss'],
 })
 export class UnfmainPage implements OnInit {
-  image = null;
-  img = null;
-  imageList = [];
+  image: any = null;
+  img: any = null;
+  imageList: string[] = [''];
 
   constructor(
     public router: Router,

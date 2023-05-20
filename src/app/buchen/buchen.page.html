@@ -12,23 +12,22 @@
     Woche buchen möchten, können Sie dies hier tun.</p>
 
   <form [formGroup]="buchenForm" (ngSubmit)="onSubmit()" #form="ngForm">
-    <ion-item lines="none">
+
       <ion-input class="tex" formControlName="names" type="text"
-        label="Name und Vorname" aria-placeholder="Name und Vorname"></ion-input>
-    </ion-item>
+        label="Name" placeholder="Namen und Vornamen eingeben"></ion-input>
 
     <ion-item lines="none">
       <ion-toggle class="bggr" slot="start" color="light" formControlName="sameCar"
       type="toggle" checked="false">Gleiches Auto???</ion-toggle>
     </ion-item> <br><br><br>
 
+    <ion-button type="submit" expand="block" color="light" [disabled]="!buchenForm.controls.names.valid">
+      Weiter
+    </ion-button>
+
     <ion-item class="error-message"
       *ngIf="!buchenForm.controls.names.valid || form.submitted && !buchenForm.controls.names.valid">
         Bitte Ihren Namen und Vornamen eingeben
     </ion-item>
-
-    <ion-button type="submit" expand="block" color="light" [disabled]="!buchenForm.controls.names.valid">
-      Weiter
-    </ion-button>
   </form>
 </ion-content>

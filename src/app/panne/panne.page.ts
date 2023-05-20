@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class PannePage implements OnInit {
 
-  message: string;
-  zul = '';
-  stao = '';
+  message: string = '';
+  zul: string = '';
+  stao: string = '';
 
   constructor(private emailComposer: EmailComposer,
     private router: Router) { }

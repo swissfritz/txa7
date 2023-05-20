@@ -16,7 +16,11 @@
   <ion-button expand="block"  color="dark" (click)="sendMailT()">EMAIL SENDEN</ion-button>
 
   <ion-card>
-    <ion-card-header class="tex">Gegenwärtiges Foto</ion-card-header>
+    <ion-card-header class="bow">
+        <ion-span>Gegenwärtiges Foto</ion-span>
+        <ion-icon name="arrow-down-sharp" aria-hidden="true"></ion-icon>
+    </ion-card-header>
+    
     <ion-card-content>
       <ion-img [src]="image" *ngIf="image"></ion-img>
     </ion-card-content>

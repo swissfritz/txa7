@@ -7,7 +7,7 @@ import { Router, NavigationExtras } from '@angular/router';
   templateUrl: './buchen.page.html',
   styleUrls: ['./buchen.page.scss'],
 })
-export class BuchenPage implements OnInit {
+export class BuchenPage implements OnInit { 
 
   public buchenForm = this.fb.group({
       names: ['', Validators.required],

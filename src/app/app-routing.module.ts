@@ -92,14 +92,6 @@ const routes: Routes = [
     loadChildren: () => import('./buchen/buchen.module').then( m => m.BuchenPageModule)
   },
   {
-    path: 'ft1',
-    loadChildren: () => import('./ft1/ft1.module').then( m => m.Ft1PageModule)
-  },
-  {
-    path: 'ft2',
-    loadChildren: () => import('./ft2/ft2.module').then( m => m.Ft2PageModule)
-  },
-  {
     path: 'buchen1',
     loadChildren: () => import('./buchen1/buchen1.module').then( m => m.Buchen1PageModule)
   },
