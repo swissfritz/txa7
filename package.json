@@ -1,7 +1,7 @@
 {
-  "name": "txa22",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
+  "name": "txa7",
+  "version":"3.3.5",
+  "author": "Fritz Frei",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
