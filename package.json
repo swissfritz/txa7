@@ -1,6 +1,6 @@
 {
   "name": "txa7",
-  "version":"3.3.5",
+  "version": "3.3.5",
   "author": "Fritz Frei",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -27,7 +27,7 @@
     "@awesome-cordova-plugins/splash-screen": "^6.3.0",
     "@awesome-cordova-plugins/status-bar": "^6.3.0",
     "@ionic/angular": "^7.0.0",
-    "@ionic/cli": "^6.20.9",
+    "@ionic/cli": "^7.1.1",
     "@ionic/cordova-builders": "^7.0.0",
     "@ionic/core": "^6.3.8",
     "cordova": "^11.1.0",
